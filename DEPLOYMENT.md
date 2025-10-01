@@ -34,26 +34,34 @@ This guide will help you deploy your CourierNest application to GitHub, Netlify 
    git push -u origin main
    ```
 
-### Step 2: Deploy Backend to Railway
+### Step 2: Deploy Backend to Render (FREE!)
 
-1. **Go to Railway:**
-   - Visit https://railway.app/
+1. **Go to Render:**
+   - Visit https://render.com/
    - Sign up/login with GitHub
 
-2. **Create new project:**
-   - Click "New Project"
-   - Select "Deploy from GitHub repo"
+2. **Create new Web Service:**
+   - Click "New +" → "Web Service"
+   - Connect your GitHub repository
    - Choose your `couriernest` repository
-   - Select the `backend` folder
 
-3. **Configure Railway:**
-   - Railway will auto-detect Node.js
-   - It will install dependencies automatically
-   - The app will start with `node server.js`
+3. **Configure Render:**
+   - **Name:** `couriernest-backend`
+   - **Root Directory:** `backend`
+   - **Environment:** `Node`
+   - **Build Command:** `npm install`
+   - **Start Command:** `node server.js`
+   - **Plan:** Free
 
-4. **Get your backend URL:**
-   - Once deployed, Railway will give you a URL like: `https://couriernest-backend-production.up.railway.app`
-   - Copy this URL - you'll need it for the frontend
+4. **Set Environment Variables:**
+   - Add environment variable:
+     - **Key:** `FRONTEND_URL`
+     - **Value:** `https://your-netlify-app.netlify.app` (update after frontend deployment)
+
+5. **Deploy:**
+   - Click "Create Web Service"
+   - Render will build and deploy your backend
+   - You'll get a URL like: `https://couriernest-backend.onrender.com`
 
 ### Step 3: Deploy Frontend to Netlify
 
@@ -73,8 +81,8 @@ This guide will help you deploy your CourierNest application to GitHub, Netlify 
    - Go to Site settings > Environment variables
    - Add new variable:
      - **Key:** `VITE_API_BASE`
-     - **Value:** `https://your-railway-backend-url.railway.app/api`
-     - Replace with your actual Railway URL
+     - **Value:** `https://couriernest-backend.onrender.com/api`
+     - Replace with your actual Render URL
 
 4. **Deploy:**
    - Click "Deploy site"
@@ -84,19 +92,13 @@ This guide will help you deploy your CourierNest application to GitHub, Netlify 
 ### Step 4: Update CORS for Production
 
 1. **Update backend CORS settings:**
-   - In your Railway dashboard, go to your backend service
+   - In your Render dashboard, go to your backend service
+   - Go to Environment tab
    - Add environment variable:
      - **Key:** `FRONTEND_URL`
      - **Value:** `https://your-netlify-url.netlify.app`
 
-2. **Update server.js CORS:**
-   ```javascript
-   // In backend/server.js, update the CORS configuration:
-   app.use(cors({
-     origin: process.env.FRONTEND_URL || 'http://localhost:5173',
-     credentials: true
-   }));
-   ```
+2. **CORS is already configured** in server.js to use the FRONTEND_URL environment variable
 
 ### Step 5: Test Your Deployment
 
@@ -119,7 +121,7 @@ This guide will help you deploy your CourierNest application to GitHub, Netlify 
 
 After deployment, you'll have:
 - **Frontend:** `https://your-app-name.netlify.app`
-- **Backend:** `https://your-app-name.railway.app`
+- **Backend:** `https://couriernest-backend.onrender.com`
 - **GitHub:** `https://github.com/your-username/couriernest`
 
 ## 🔄 Updating Your App

@@ -1,10 +1,12 @@
 {
   "name": "couriernest-backend",
   "version": "1.0.0",
+  "description": "CourierNest Backend API - Azure App Service",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "build": "echo 'No build step required'"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -13,5 +15,20 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
-  }
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/couriernest.git"
+  },
+  "keywords": [
+    "job-board",
+    "api",
+    "express",
+    "nodejs"
+  ],
+  "author": "CourierNest Team",
+  "license": "MIT"
 }
