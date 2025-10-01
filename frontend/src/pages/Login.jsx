@@ -1,0 +1,4 @@
+import React, { useState } from 'react';
+import { api } from '../api';
+import { useNavigate } from 'react-router-dom';
+export default function Login({ setUser }) { const nav = useNavigate(); const [form,setForm]=useState({ username:'', password:'' }); async function submit(e){ e.preventDefault(); try{ const res = await api.login(form); setUser(res.user); nav('/'); }catch(err){ alert('Login failed') } } return (<div className='card'><h3>Login</h3><form onSubmit={submit} className='small'><input placeholder='Username' value={form.username} onChange={e=>setForm({...form,username:e.target.value})} /><input type='password' placeholder='Password' value={form.password} onChange={e=>setForm({...form,password:e.target.value})} /><button className='btn btn-primary'>Login</button></form><p className='small'>Try <b>admin/admin</b> (admin) or create a new account via Sign up.</p></div>); }

@@ -1,0 +1,175 @@
+{
+  "users": [
+    {
+      "id": "u_admin",
+      "username": "admin",
+      "role": "admin",
+      "password": "admin"
+    },
+    {
+      "id": "u_john",
+      "username": "john",
+      "role": "student",
+      "password": "pass"
+    },
+    {
+      "id": "u_t88hp1s",
+      "username": "ali",
+      "password": "ali",
+      "role": "student"
+    },
+    {
+      "id": "u_sarah",
+      "username": "sarah",
+      "password": "sarah123",
+      "role": "student"
+    },
+    {
+      "id": "u_mike",
+      "username": "mike",
+      "password": "mike123",
+      "role": "student"
+    }
+  ],
+  "jobs": [
+    {
+      "_id": "job1",
+      "title": "Frontend Developer Intern",
+      "company": "TechCorp",
+      "location": "San Francisco, CA",
+      "job_type": "Internship",
+      "pay_type": "Paid",
+      "level": "Fresher",
+      "description": "Join our dynamic frontend team and work on cutting-edge web applications. You'll learn React, TypeScript, and modern development practices while contributing to real projects.",
+      "posted_on": 1759312818665
+    },
+    {
+      "_id": "job2",
+      "title": "Senior Backend Engineer",
+      "company": "DataFlow Inc",
+      "location": "New York, NY",
+      "job_type": "Job",
+      "pay_type": "Paid",
+      "level": "Experienced",
+      "description": "We're looking for an experienced backend engineer to join our growing team. You'll work with Node.js, Python, and cloud technologies to build scalable microservices.",
+      "posted_on": 1759312818665
+    },
+    {
+      "_id": "job3",
+      "title": "UX/UI Design Intern",
+      "company": "Creative Studio",
+      "location": "Remote",
+      "job_type": "Internship",
+      "pay_type": "Unpaid",
+      "level": "Fresher",
+      "description": "Perfect opportunity for design students to gain real-world experience. Work on user research, wireframing, and creating beautiful interfaces for our clients.",
+      "posted_on": 1759312818665
+    },
+    {
+      "_id": "job4",
+      "title": "Full Stack Developer",
+      "company": "StartupXYZ",
+      "location": "Austin, TX",
+      "job_type": "Job",
+      "pay_type": "Paid",
+      "level": "Experienced",
+      "description": "Join our fast-growing startup and help build the next generation of web applications. We use React, Node.js, and AWS to create amazing user experiences.",
+      "posted_on": 1759312818665
+    },
+    {
+      "_id": "job5",
+      "title": "Data Science Intern",
+      "company": "Analytics Pro",
+      "location": "Seattle, WA",
+      "job_type": "Internship",
+      "pay_type": "Paid",
+      "level": "Fresher",
+      "description": "Work with our data science team to analyze large datasets and build machine learning models. Great opportunity to learn Python, R, and data visualization tools.",
+      "posted_on": 1759312818665
+    },
+    {
+      "_id": "job6",
+      "title": "DevOps Engineer",
+      "company": "CloudTech Solutions",
+      "location": "Remote",
+      "job_type": "Job",
+      "pay_type": "Paid",
+      "level": "Experienced",
+      "description": "Help us scale our infrastructure and improve our deployment processes. Experience with Docker, Kubernetes, and AWS required.",
+      "posted_on": 1759312818665
+    },
+    {
+      "_id": "job7",
+      "title": "Marketing Intern",
+      "company": "Growth Marketing Co",
+      "location": "Los Angeles, CA",
+      "job_type": "Internship",
+      "pay_type": "Unpaid",
+      "level": "Fresher",
+      "description": "Learn digital marketing strategies and help us grow our client base. You'll work on social media campaigns, content creation, and analytics.",
+      "posted_on": 1759312818665
+    },
+    {
+      "_id": "job8",
+      "title": "Product Manager",
+      "company": "Innovation Labs",
+      "location": "Boston, MA",
+      "job_type": "Job",
+      "pay_type": "Paid",
+      "level": "Experienced",
+      "description": "Lead product development from conception to launch. Work with engineering and design teams to create products that users love.",
+      "posted_on": 1759312818665
+    },
+    {
+      "_id": "job9",
+      "title": "Mobile App Developer",
+      "company": "AppCraft",
+      "location": "Chicago, IL",
+      "job_type": "Job",
+      "pay_type": "Paid",
+      "level": "Experienced",
+      "description": "Build native iOS and Android applications using React Native. Join our team of passionate developers creating apps used by millions.",
+      "posted_on": 1759312818665
+    },
+    {
+      "_id": "job10",
+      "title": "Content Writing Intern",
+      "company": "Digital Media Group",
+      "location": "Remote",
+      "job_type": "Internship",
+      "pay_type": "Unpaid",
+      "level": "Fresher",
+      "description": "Write engaging content for our blog, social media, and marketing materials. Perfect for English majors or aspiring writers.",
+      "posted_on": 1759312818665
+    }
+  ],
+  "applications": [
+    {
+      "_id": "app_4ervjpr",
+      "job": "job1",
+      "name": "Ali Ahmad",
+      "email": "alihmaduk@gmail.com",
+      "phone": "03096439452",
+      "resume_text": "Experienced frontend developer with 2 years of React experience. Passionate about creating beautiful user interfaces and learning new technologies.",
+      "applied_on": 1759312738823
+    },
+    {
+      "_id": "app_oj440us",
+      "job": "job1",
+      "name": "Sarah Johnson",
+      "email": "sarah.j@email.com",
+      "phone": "555-0123",
+      "resume_text": "Recent computer science graduate with strong foundation in web development. Completed several personal projects using React and JavaScript.",
+      "applied_on": 1759312876986
+    },
+    {
+      "_id": "app_xyz123",
+      "job": "job2",
+      "name": "Mike Chen",
+      "email": "mike.chen@email.com",
+      "phone": "555-0456",
+      "resume_text": "Senior software engineer with 5+ years of backend development experience. Expert in Node.js, Python, and cloud technologies.",
+      "applied_on": 1759312900000
+    }
+  ]
+}
